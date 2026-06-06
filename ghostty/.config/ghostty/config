@@ -1,0 +1,21 @@
+theme = "Mathias"
+split-divider-color = "#222"
+background-opacity = 0.98
+unfocused-split-opacity = 1
+window-colorspace = "display-p3"
+
+font-family = "GeistMono NF"
+font-size = 12
+font-thicken = true
+font-feature = "-liga,-clig,-calt"
+
+cursor-style = "block"
+cursor-style-blink = false
+
+window-padding-x = 16
+window-padding-y = 8
+
+macos-titlebar-proxy-icon = "hidden"
+
+shell-integration-features = "no-cursor"
+mouse-scroll-multiplier = 0.4

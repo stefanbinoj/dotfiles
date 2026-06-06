@@ -1,0 +1,32 @@
+# vi /Users/stefanbinoj/Library/Application\ Support/lazygit/config.yml
+
+gui:
+  scrollheight: 4
+  scrollPastBottom: true
+  mouseEvents: true
+  sidePanelWidth: 0.2
+  theme:
+    activeBorderColor:
+      - green
+      - bold
+    inactiveBorderColor:
+      - bold
+    selectedLineBgColor:
+      - "#3a5f8a"
+    selectedRangeBgColor:
+      - "#3a5f8a"
+os:
+  edit: 'nvim {{filename}}'
+commandStatus: true
+# git:
+#   fileDiffTemplate: 'git difftool --no-prompt --extcmd="icdiff -U3 -H -N --cols{{width}}" {{args}} {{filename}}'
+# git:
+#  pagers:
+#    - colorArg: always
+#      pager: delta --dark --paging=never --syntax-theme base16-256 --side-by-side
+
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never
+

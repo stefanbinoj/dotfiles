@@ -1,0 +1,6 @@
+[user]
+	email = "truphor@gmail.com"
+	name = "Tru phor"
+	signingKey = "~/.ssh/id_ed25519_truphor.pub"
+
+# git clone git@github-work:truphor-coder/tst.git

@@ -1,0 +1,14 @@
+# vi /Users/stefanbinoj/Library/Application Support/lazydocker
+
+gui:
+  scrollheight: 4
+  scrollPastBottom: true
+  mouseEvents: true
+  #sidePanelWidth: 50
+  theme:
+    activeBorderColor:
+      - green
+      - bold
+    inactiveBorderColor:
+      - bold
+

@@ -1,0 +1,56 @@
+[alias]
+    fomo = "!git fetch origin && git rebase origin/$(git branch --show-current) --autostash"
+    nuke = "!git add --all && git stash && git stash clear"
+
+[branch]
+    sort = -committerdate
+
+[core]
+    pager = delta
+    editor = nvim
+    fsmonitor = true
+    untrackedCache = true
+
+[fetch]
+    prune = true
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[rebase]
+    updateRefs = true
+
+[rerere]
+    enabled = true
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgSign = true
+
+[tag]
+    gpgSign = true
+
+[user]
+    email = stefan.binoj.007@gmail.com
+    name = Stefan Binoj
+    signingKey = ~/.ssh/id_ed25519.pub
+
+[includeIf "gitdir:~/Developer/work/"]
+    path = ~/.config/git/work_config
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+    dark = true
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
