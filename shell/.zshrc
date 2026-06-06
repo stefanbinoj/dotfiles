@@ -1,22 +1,22 @@
-ZSH_THEME="robbyrussell"
-DISABLE_AUTO_TITLE="true"
-DISABLE_MAGIC_FUNCTIONS="true"
-COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(git zsh-autosuggestions)
+KEYTIMEOUT=1
+
+# zinit
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+zinit light jeffreytse/zsh-vi-mode
+zinit wait lucid for \
+    zsh-users/zsh-autosuggestions \
+    zsh-users/zsh-syntax-highlighting
+zinit snippet https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/themes/robbyrussell.zsh-theme
 bindkey '^ ' autosuggest-accept
 
-source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
+# tab completion
+autoload -Uz compinit
+compinit -C
 
 # nvm
-source "$(brew --prefix nvm)/nvm.sh"
-
-# Aliases
-alias zed="open -a /Applications/Zed.app -n"
-alias vi=nvim
-alias lg=lazygit
-alias ld=lazydocker
+eval "$(fnm env --use-on-cd)"
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -30,3 +30,10 @@ eval "$(pyenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# Aliases
+alias zed="open -a /Applications/Zed.app -n"
+alias vi=nvim
+alias lg=lazygit
+alias ld=lazydocker
+alias cat=bat
