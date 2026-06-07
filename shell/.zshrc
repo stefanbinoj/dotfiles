@@ -4,12 +4,19 @@ KEYTIMEOUT=1
 
 # zinit
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+
 zinit light jeffreytse/zsh-vi-mode
+zinit light zsh-users/zsh-autosuggestions
+zinit light romkatv/zsh-defer
+zsh-defer bindkey '^ ' autosuggest-accept
+
 zinit wait lucid for \
-    zsh-users/zsh-autosuggestions \
     zsh-users/zsh-syntax-highlighting
-zinit snippet https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/themes/robbyrussell.zsh-theme
-bindkey '^ ' autosuggest-accept
+
+zinit snippet OMZL::async_prompt.zsh
+zinit snippet OMZL::git.zsh
+setopt PROMPT_SUBST
+zinit snippet OMZT::robbyrussell.zsh-theme
 
 # tab completion
 autoload -Uz compinit
