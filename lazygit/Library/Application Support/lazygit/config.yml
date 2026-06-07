@@ -28,5 +28,5 @@ commandStatus: true
 git:
   pagers:
     - colorArg: always
-      pager: delta --paging=never
+      pager: delta --paging=never --navigate --side-by-side --line-numbers --dark
 

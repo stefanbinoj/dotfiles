@@ -6,7 +6,6 @@
     sort = -committerdate
 
 [core]
-    pager = delta
     editor = nvim
     fsmonitor = true
     untrackedCache = true
@@ -42,15 +41,6 @@
 
 [includeIf "gitdir:~/Developer/work/"]
     path = ~/.config/git/work_config
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true
-    side-by-side = true
-    line-numbers = true
-    dark = true
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
