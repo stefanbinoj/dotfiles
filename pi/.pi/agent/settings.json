@@ -1,0 +1,33 @@
+{
+  "lastChangelogVersion": "0.78.1",
+  "defaultProvider": "github-copilot",
+  "defaultModel": "gemini-3.1-pro-preview",
+  "defaultThinkingLevel": "low",
+  "theme": "github-dark-default",
+  "packages": [
+    "npm:pi-powerline",
+    "../../Developer/fun/pi-undo",
+    "npm:@plannotator/pi-extension"
+  ],
+  "hideThinkingBlock": true,
+  "hideToolOutput": true,
+  "powerline": true,
+  "breadcrumb": "inner",
+  "footer": true,
+  "header": true,
+  "header-info": true,
+  "showHardwareCursor": false,
+  "editorPaddingX": 1,
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "treeFilterMode": "no-tools",
+  "enabledModels": [
+    "github-copilot/gemini-3-flash-preview",
+    "github-copilot/gemini-3.1-pro-preview",
+    "minimax/MiniMax-M2.7",
+    "openai-codex/gpt-5.5"
+  ],
+  "enableSkillCommands": true,
+  "quietStartup": true
+}
