@@ -1,12 +1,11 @@
 {
   "lastChangelogVersion": "0.78.1",
-  "defaultProvider": "github-copilot",
-  "defaultModel": "gemini-3.1-pro-preview",
-  "defaultThinkingLevel": "low",
+  "defaultProvider": "minimax",
+  "defaultModel": "MiniMax-M3",
+  "defaultThinkingLevel": "medium",
   "theme": "github-dark-default",
   "packages": [
     "npm:pi-powerline",
-    "../../Developer/fun/pi-undo",
     "npm:@plannotator/pi-extension"
   ],
   "hideThinkingBlock": true,
@@ -26,7 +25,8 @@
     "github-copilot/gemini-3-flash-preview",
     "github-copilot/gemini-3.1-pro-preview",
     "minimax/MiniMax-M2.7",
-    "openai-codex/gpt-5.5"
+    "openai-codex/gpt-5.5",
+    "minimax/MiniMax-M3"
   ],
   "enableSkillCommands": true,
   "quietStartup": true

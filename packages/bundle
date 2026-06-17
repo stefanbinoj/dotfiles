@@ -30,6 +30,7 @@ brew "uv"
 brew "wget"
 brew "hashicorp/tap/terraform"
 brew "zoxide"
+brew "modem-dev/tap/hunk"
 # brew "doggo"
 
 # Casks
@@ -50,3 +51,4 @@ cask "wispr-flow"
 cask "yaak"
 cask "zed"
 cask "cloudflare-warp"
+cask "productdevbook/tap/portkiller"
