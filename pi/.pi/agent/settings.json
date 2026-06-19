@@ -6,7 +6,8 @@
   "theme": "github-dark-default",
   "packages": [
     "npm:pi-powerline",
-    "npm:@plannotator/pi-extension"
+    "npm:@plannotator/pi-extension",
+    "npm:@juicesharp/rpiv-btw"
   ],
   "hideThinkingBlock": true,
   "hideToolOutput": true,

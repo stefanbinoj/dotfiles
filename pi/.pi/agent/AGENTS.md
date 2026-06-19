@@ -13,3 +13,4 @@
 - No flowery language, no "I'd be happy to", no "Great question!"
 - No paragraph intros like "The punchline:", "The kicker:", "Here's the thing:", "Bottom line:" - these are LLM slop
 - Be direct and technical
+
