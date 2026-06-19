@@ -1,5 +1,5 @@
-theme = "Mathias"
-split-divider-color = "#222"
+theme = Github Dark
+split-divider-color = "#6e7681"
 background-opacity = 0.98
 unfocused-split-opacity = 1
 window-colorspace = "display-p3"
@@ -19,3 +19,5 @@ macos-titlebar-proxy-icon = "hidden"
 
 shell-integration-features = "no-cursor"
 mouse-scroll-multiplier = 0.4
+confirm-close-surface = false
+term = xterm-256color

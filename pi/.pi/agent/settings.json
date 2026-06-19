@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.78.1",
+  "lastChangelogVersion": "0.79.8",
   "defaultProvider": "minimax",
   "defaultModel": "MiniMax-M3",
   "defaultThinkingLevel": "medium",

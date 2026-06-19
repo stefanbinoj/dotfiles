@@ -5,7 +5,7 @@ return {
 	priority = 1000, -- make sure to load this before all the other start plugins
 	config = function()
 		require("github-theme").setup({})
-		vim.api.nvim_command("hi ColorColumn guibg=#32363d")
+		vim.api.nvim_command("hi ColorColumn guibg=#484f58")
 		vim.cmd("colorscheme github_dark_colorblind")
 	end,
 
