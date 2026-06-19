@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "0.79.8",
-  "defaultProvider": "minimax",
-  "defaultModel": "MiniMax-M3",
+  "defaultProvider": "github-copilot",
+  "defaultModel": "gemini-3-flash-preview",
   "defaultThinkingLevel": "medium",
   "theme": "github-dark-default",
   "packages": [
