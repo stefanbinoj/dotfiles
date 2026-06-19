@@ -1,13 +1,12 @@
 return {
-  -- Learn
   "kevinhwang91/nvim-ufo",
   dependencies = {
     "kevinhwang91/promise-async",
   },
   event = "BufRead",
   keys = {
-    { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" },
-    { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
+    { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" }, -- TODO: Learn
+    { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" }, -- TODO: Learn
     { "zK", function()
       local winid = require("ufo").peekFoldedLinesUnderCursor()
       if not winid then

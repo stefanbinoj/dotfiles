@@ -8,14 +8,14 @@ return {
 		{
 			"]t",
 			function()
-				require("todo-comments").jump_next()
+				require("todo-comments").jump_next() -- TODO: Learn
 			end,
 			desc = "Next TODO comment",
 		},
 		{
 			"[t",
 			function()
-				require("todo-comments").jump_prev()
+				require("todo-comments").jump_prev() -- TODO: Learn
 			end,
 			desc = "Previous TODO comment",
 		},
