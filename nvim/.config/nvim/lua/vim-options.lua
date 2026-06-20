@@ -66,7 +66,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 -- Folding (managed by nvim-ufo)
-vim.opt.foldcolumn = "1"
+vim.opt.foldcolumn = "0"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
