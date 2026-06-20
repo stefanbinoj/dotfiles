@@ -1,6 +1,5 @@
 theme = Github Dark Dimmed
 split-divider-color = "#6e7681"
-background-opacity = 0.98
 unfocused-split-opacity = 1
 window-colorspace = "display-p3"
 
@@ -13,9 +12,9 @@ cursor-style = "block"
 cursor-style-blink = false
 
 window-padding-x = 16
-window-padding-y = 8
-
+window-padding-y = 0
 macos-titlebar-proxy-icon = "hidden"
+title = " "
 
 shell-integration-features = "no-cursor"
 mouse-scroll-multiplier = 0.4
