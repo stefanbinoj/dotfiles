@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("github-theme").setup({})
 		vim.api.nvim_command("hi ColorColumn guibg=#484f58")
-		vim.cmd("colorscheme github_dark_colorblind")
+		vim.cmd("colorscheme github_dark_dimmed")
 	end,
 
 	-- "rebelot/kanagawa.nvim",
