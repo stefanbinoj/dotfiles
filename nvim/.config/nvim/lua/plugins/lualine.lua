@@ -4,7 +4,43 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "codedark",
+				theme = {
+					normal = {
+						a = { fg = "#22272e", bg = "#539bf5", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					insert = {
+						a = { fg = "#22272e", bg = "#57ab5a", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					visual = {
+						a = { fg = "#22272e", bg = "#b083f0", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					replace = {
+						a = { fg = "#22272e", bg = "#f47067", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					command = {
+						a = { fg = "#22272e", bg = "#daaa3f", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					terminal = {
+						a = { fg = "#22272e", bg = "#39c5cf", gui = "bold" },
+						b = { fg = "#adbac7", bg = "#2d333b" },
+						c = { fg = "#adbac7", bg = "#22272e" },
+					},
+					inactive = {
+						a = { fg = "#768390", bg = "#2d333b" },
+						b = { fg = "#768390", bg = "#2d333b" },
+						c = { fg = "#768390", bg = "#22272e" },
+					},
+				},
 			},
 			sections = {
 				lualine_x = {},

@@ -21,7 +21,7 @@ return {
 			})
 
 			-- Highlight style for illuminated words
-			local commonAttributes = "gui=none guibg=#444444"
+			local commonAttributes = "gui=none guibg=#444c56"
 			vim.cmd("hi IlluminatedWordRead " .. commonAttributes)
 			vim.cmd("hi IlluminatedWordWrite " .. commonAttributes)
 			vim.cmd("hi IlluminatedWordText " .. commonAttributes)

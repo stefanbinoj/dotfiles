@@ -14,7 +14,7 @@ return {
 				min_jump = 10,
 				cursor_events = { "CursorMoved" },
 				window_events = { "WinEnter", "FocusGained", "BufEnter" },
-				highlight = { bg = "white", ctermbg = 15 },
+				highlight = { bg = "#539bf5", ctermbg = 67 },
 			})
 		end,
 	},
