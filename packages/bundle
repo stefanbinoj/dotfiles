@@ -35,6 +35,7 @@ brew "modem-dev/tap/hunk"
 
 # Casks
 cask "aerospace", tap: "nikitabobko/tap"
+cask "agentsview"
 cask "codex"
 cask "helium"
 cask "ghostty"
