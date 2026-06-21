@@ -1,8 +1,10 @@
 # Neovim Config
 
-<img width="1907" height="1023" alt="Neovim Config Screenshot" src="https://placehold.co/1907x1023/1e1e2e/ffffff?text=Neovim+Config+Screenshot&font=roboto" />
-
 Modern Neovim setup with essential plugins.
+
+
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-08-03" src="https://github.com/user-attachments/assets/673e9065-c293-4f00-a59b-2302acb2e0a7" />
+
 
 ## Features
 
@@ -70,3 +72,20 @@ Modern Neovim setup with essential plugins.
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git signs
 - [openingh.nvim](https://github.com/almo7aya/openingh.nvim) - Open files/repos on GitHub
 - [vim-wakatime](https://github.com/wakatime/vim-wakatime) - Time tracking
+
+### Screenshots
+
+<table>
+<tr>
+<td>
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-07-35" src="https://github.com/user-attachments/assets/950e117a-adb7-4c9b-9b2c-a9b5b8ec37ae" />
+
+</td>
+<td>
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-51-00" src="https://github.com/user-attachments/assets/967996db-8965-4b62-a6fa-ac6e14194750" />
+
+
+</td>
+</tr>
+</table>
+
