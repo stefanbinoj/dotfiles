@@ -24,7 +24,8 @@ brew "fnm"
 brew "pyenv"
 brew "ripgrep"
 brew "stow"
-brew "tmux"
+# HEAD required for tmux >= 3.7 (progressbar terminal feature passthrough)
+brew "tmux", args: ["HEAD"]
 brew "tree"
 brew "uv"
 brew "wget"

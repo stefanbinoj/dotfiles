@@ -20,3 +20,4 @@ shell-integration-features = "no-cursor"
 mouse-scroll-multiplier = 0.4
 confirm-close-surface = false
 term = xterm-256color
+progress-style = true
