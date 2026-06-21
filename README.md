@@ -1,9 +1,12 @@
 # Dotfiles
 
-<img width="1600" height="900" alt="Dotfiles Overview" src="https://placehold.co/1600x900/1e1e2e/ffffff?text=Dotfiles+Overview&font=roboto" />
+Personal dotfiles managed with `stow`.
 
-Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level directory is a stow package that mirrors its files into `$HOME`.
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-32-54" src="https://github.com/user-attachments/assets/350c7d87-70c6-42a9-a2cd-ecdbccf14200" />
 
+
+
+\
 ![stow](https://img.shields.io/badge/managed%20with-stow-8d1cdc?style=flat-square)
 ![platform](https://img.shields.io/badge/platform-macOS-blue?style=flat-square)
 
@@ -43,11 +46,6 @@ stow --target=$HOME tmux
 stow --target=$HOME aerospace
 ```
 
-Or stow everything at once:
-
-```sh
-stow --target=$HOME --dir=. */
-```
 
 Useful flags:
 
@@ -62,24 +60,35 @@ Useful flags:
 
 <table>
 <tr>
-<td><img alt="Aerospace" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Aerospace&font=roboto" /></td>
-<td><img alt="Ghostty" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Ghostty&font=roboto" /></td>
+<td>
+    <img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-30-40" src="https://github.com/user-attachments/assets/6376ecd5-6e31-41ce-acdf-5fb281a32f35" />
+
+
+  
+</td>
+<td>
+
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-30-54" src="https://github.com/user-attachments/assets/db3c97e1-90c4-4689-b257-8b26d72dd6b4" />
+
+</td>
 </tr>
 <tr>
-<td><img alt="Neovim" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Neovim&font=roboto" /></td>
-<td><img alt="tmux" src="https://placehold.co/600x400/1e1e2e/ffffff?text=tmux&font=roboto" /></td>
+<td>
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-11-03" src="https://github.com/user-attachments/assets/4051284f-5a5f-41ac-a2ed-5ead9e29422b" />
+
+  
+</td>
+<td>
+
+<img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-08-50" src="https://github.com/user-attachments/assets/1bd2da48-99ba-415f-8fdb-e937d21c8be7" />
+
+</td>
 </tr>
-<tr>
-<td><img alt="Lazygit" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Lazygit&font=roboto" /></td>
-<td><img alt="Lazydocker" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Lazydocker&font=roboto" /></td>
-</tr>
-<tr>
-<td><img alt="Shell" src="https://placehold.co/600x400/1e1e2e/ffffff?text=zsh&font=roboto" /></td>
-<td><img alt="Zed" src="https://placehold.co/600x400/1e1e2e/ffffff?text=Zed&font=roboto" /></td>
-</tr>
+
 </table>
 
 ---
+
 
 ## Tools
 
@@ -126,23 +135,17 @@ Complex key modifications on macOS.
 
 Config: [`config.yml`](lazydocker/Library/Application%20Support/lazydocker/config.yml)
 
-Terminal UI for Docker.
-
+Custom TUI for Docker, themed to match the GitHub Dark Dimmed palette.
 
 ### Lazygit
 
 Config: [`config.yml`](lazygit/Library/Application%20Support/lazygit/config.yml)
 
-Terminal UI for git.
-
+Custom TUI for git, themed to match the GitHub Dark Dimmed palette.
 
 ### Neovim
 
 See [`nvim/.config/nvim/README.md`](nvim/.config/nvim/README.md) for the full plugin list, keybindings, and feature breakdown.
-
-### OpenCode
-
-[`AGENTS.md`](opencode/.config/opencode/AGENTS.md) — Agent-level instructions shared with the OpenCode assistant.
 
 ### Packages — Homebrew Bundle
 
@@ -176,10 +179,6 @@ zsh shell setup.
 - zsh-vi-mode, autosuggestions, syntax highlighting, defer
 - robbyrussell prompt with async rendering
 - fnm for Node version management, zoxide for smart `cd`
-
-### SSH
-
-[`config`](ssh/.ssh/config) — Per-host client settings, keepalives, and jump hosts.
 
 ### tmux
 
