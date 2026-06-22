@@ -2,7 +2,11 @@ start-at-login = true
 
 after-startup-command = [
   'exec-and-forget open -a Ghostty',
-  'exec-and-forget open -a Obsidian'
+  'exec-and-forget open -a Obsidian',
+  'exec-and-forget open -a Slack',
+  'exec-and-forget open -a Discord',
+  'exec-and-forget aerospace workspace 2',
+  'exec-and-forget open -a "Helium"'
 ]
 
 enable-normalization-flatten-containers = false
@@ -23,6 +27,14 @@ run = 'move-node-to-workspace 3'
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'

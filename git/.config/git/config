@@ -39,8 +39,8 @@
     name = Stefan Binoj
     signingKey = ~/.ssh/id_ed25519.pub
 
-[includeIf "gitdir:~/Developer/work/"]
-    path = ~/.config/git/work_config
+; [includeIf "gitdir:~/Developer/work/"]
+;     path = ~/.config/git/work_config
 
 [url "git@github.com:"]
     insteadOf = https://github.com/

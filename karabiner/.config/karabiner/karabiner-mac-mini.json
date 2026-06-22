@@ -17,46 +17,7 @@
                             }
                         ]
                     },
-                    {
-                        "description": "Press Left Shift ⇧ and Right Shift ⇧ together to toggle Caps Lock",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "hold_down_milliseconds": 200,
-                                        "key_code": "caps_lock"
-                                    },
-                                    { "key_code": "vk_none" }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": ["right_shift"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "hold_down_milliseconds": 200,
-                                        "key_code": "caps_lock"
-                                    },
-                                    { "key_code": "vk_none" }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
+                    
                     {
                         "description": "Change left_control+hjkl to arrow keys (except Raycast, VSCode, Zed, Cursor, cmux, Ghostty, Terminal)",
                         "manipulators": [
