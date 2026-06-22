@@ -1,4 +1,3 @@
--- TODO: learn
 return {
 	{
 		"williamboman/mason.nvim",
@@ -15,7 +14,6 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				-- Servers to ensure are installed. vtsls replaces ts_ls (modern TS/JS LSP).
 				ensure_installed = { "lua_ls", "vtsls" },
 			})
 		end,
@@ -26,9 +24,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			-- === Per-server custom config ===
 
-			-- vtsls: rich TS/JS config with inlay hints, auto-imports, import preferences
 			vim.lsp.config("vtsls", {
 				capabilities = capabilities,
 				settings = {
@@ -44,7 +40,6 @@ return {
 							importModuleSpecifierEnding = "minimal",
 							includePackageJsonAutoImports = "on",
 						},
-						-- Inlay hints: inline type hints shown in your code
 						inlayHints = {
 							parameterNames = { enabled = "literals" },
 							parameterTypes = { enabled = true },
@@ -65,21 +60,16 @@ return {
 				},
 			})
 
-			-- Default config (with capabilities) for the other ensure_installed servers
 			vim.lsp.config("lua_ls", { capabilities = capabilities })
 
 			-- === Auto-enable all mason-installed servers (Dax pattern) ===
 			-- Iterates whatever mason has installed and enables each one.
-			-- Custom vtsls/lua_ls config above is preserved because vim.lsp.config
-			-- persists per-server until explicitly overwritten.
 			local mason_lspconfig = require("mason-lspconfig")
 			for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
 				pcall(vim.lsp.enable, server)
 			end
 
 			-- === LSP keybinds on LspAttach (Dax pattern: buffer-local, modern way) ===
-			-- Setting keybinds here means they only exist in buffers with an LSP attached.
-			-- If you :LspStop, the keybinds go away with the buffer state.
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 				callback = function(event)
@@ -99,7 +89,6 @@ return {
 						return vim.tbl_extend("force", bufopts, { desc = desc })
 					end
 
-					-- === Navigation (g-prefix motions) ===
 					-- Existing keybinds (kept):
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, key("Hover docs")) -- Docs for symbol under cursor
 					vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, key("Go to definition")) -- Where symbol is defined
@@ -111,22 +100,35 @@ return {
 					vim.keymap.set("n", "go", vim.lsp.buf.type_definition, key("Go to type definition")) -- For vars: jump to type/typedef
 					vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, key("Signature help")) -- Function signature in normal mode
 
-					-- === Actions (leader prefix) ===
 					-- Existing keybinds (kept):
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, key("Code actions")) -- Available code actions
 					vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, key("Format buffer")) -- Format current buffer
 
 					-- New keybinds from Dax's pattern:
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, key("Rename symbol")) -- Rename symbol across project
-					vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, key("View line diagnostics")) -- All diagnostics for line
-
-					-- Format keybind (Dax-style, n + x modes):
-					vim.keymap.set({ "n", "x" }, "<F3>", vim.lsp.buf.format, key("Format buffer")) -- Format current buffer/selection
 
 					-- === Insert mode ===
 					vim.keymap.set("i", "<C-j>", vim.lsp.buf.signature_help, key("Signature help")) -- Trigger signature help while typing
 				end,
 			})
+
+			-- Diagnostic config — same style as the deleted lua/plugins/none-ls.lua (934ca47).
+			vim.diagnostic.config({
+				virtual_text = true, -- inline errors
+				signs = true, -- gutter icons
+				underline = true, -- underline text
+				update_in_insert = false, -- don't spam while typing
+				severity_sort = true, -- sort by severity
+			})
+
+			-- floating diagnostic on hover
+			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic modal" })
+			vim.keymap.set("n", "[d", function()
+				vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+			end, { desc = "Previous error diagnostic" })
+			vim.keymap.set("n", "]d", function()
+				vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+			end, { desc = "Next error diagnostic" })
 		end,
 	},
 }
