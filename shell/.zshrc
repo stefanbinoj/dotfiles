@@ -2,7 +2,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 KEYTIMEOUT=1
 
-# zinit
+# zinit (mkdir -p "$HOME/.local/share/zinit" && git clone --branch main https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git")
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
 zinit light jeffreytse/zsh-vi-mode
