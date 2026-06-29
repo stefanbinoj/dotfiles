@@ -22,18 +22,14 @@ zinit snippet OMZT::robbyrussell.zsh-theme
 autoload -Uz compinit
 compinit -C
 
-# nvm
-eval "$(fnm env --use-on-cd)"
+# mise
+eval "$(mise activate zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
 
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
-
-# pyenv
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"

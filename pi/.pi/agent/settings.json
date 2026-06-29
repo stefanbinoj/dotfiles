@@ -7,9 +7,10 @@
   "packages": [
     "npm:pi-powerline",
     "npm:@plannotator/pi-extension",
-    "npm:@juicesharp/rpiv-btw"
+    "npm:@juicesharp/rpiv-btw",
+    "/Users/stefanbinoj/Developer/fun/pi-undo"
   ],
-  "hideThinkingBlock": true,
+  "hideThinkingBlock": false,
   "hideToolOutput": true,
   "powerline": true,
   "breadcrumb": "inner",
