@@ -1,5 +1,16 @@
 # set arguments for all 'brew install --cask' commands
 # brew leaves
+
+# brew trust nikitabobko/tap
+# brew trust hashicorp/tap
+# brew trust modem-dev/tap
+# brew trust productdevbook/tap
+
+tap "nikitabobko/tap"
+tap "hashicorp/tap"
+tap "modem-dev/tap"
+tap "productdevbook/tap"
+
 cask_args appdir: "/Applications"
 
 brew "ast-grep"
@@ -24,22 +35,22 @@ brew "stow"
 brew "tmux", args: ["HEAD"] # tmux >= 3.7 (progressbar terminal feature)
 brew "tree"
 brew "wget"
-brew "hashicorp/tap/terraform"
+brew "terraform"
 brew "zoxide"
-brew "modem-dev/tap/hunk"
+brew "hunk"
 # brew "doggo"
 
 # Casks
-cask "aerospace", tap: "nikitabobko/tap"
+cask "aerospace"
 cask "agentsview"
 cask "codex"
 cask "discord"
-cask "helium"
+cask "helium-browser"
 cask "ghostty"
 cask "jordanbaird-ice"
 cask "karabiner-elements"
 cask "macshot"
-cask "handy"
+# cask "handy" # Use inbuilt mac dictation instead
 cask "obsidian"
 cask "orbstack"
 cask "termius"
@@ -49,4 +60,4 @@ cask "visual-studio-code"
 cask "yaak"
 cask "zed"
 cask "cloudflare-warp"
-cask "productdevbook/tap/portkiller"
+cask "portkiller"
