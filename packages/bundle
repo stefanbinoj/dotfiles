@@ -50,7 +50,6 @@ cask "ghostty"
 cask "jordanbaird-ice"
 cask "karabiner-elements"
 cask "macshot"
-# cask "handy" # Use inbuilt mac dictation instead
 cask "obsidian"
 cask "orbstack"
 cask "termius"
