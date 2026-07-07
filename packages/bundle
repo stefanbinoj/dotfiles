@@ -43,7 +43,7 @@ brew "hunk"
 # Casks
 cask "aerospace"
 # cask "agentsview"
-cask "codex" #
+cask "codex" ##
 # cask "discord"
 cask "helium-browser"
 cask "ghostty"
@@ -51,12 +51,12 @@ cask "jordanbaird-ice"
 cask "karabiner-elements"
 # cask "macshot"
 cask "obsidian"
-cask "orbstack" #
+cask "orbstack" ##
 # cask "termius"
 cask "raycast"
 # cask "slack"
 # cask "visual-studio-code"
 # cask "yaak"
-cask "zed" #
+cask "zed" ##
 # cask "cloudflare-warp"
 # cask "portkiller"
