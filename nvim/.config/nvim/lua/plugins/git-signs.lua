@@ -21,16 +21,11 @@ return {
 			vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', { desc = "Stage hunk" })
 			vim.keymap.set('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', { desc = "Reset hunk" })
 			vim.keymap.set('n', '<leader>hS', ':Gitsigns stage_buffer<CR>', { desc = "Stage buffer" })
-			vim.keymap.set('n', '<leader>hu', ':Gitsigns undo_stage_hunk<CR>', { desc = "Undo stage hunk" })
 			vim.keymap.set('n', '<leader>hR', ':Gitsigns reset_buffer<CR>', { desc = "Reset buffer" })
 			vim.keymap.set('n', '<leader>tb', ':Gitsigns toggle_current_line_blame<CR>', { desc = "Toggle line blame" })
-      vim.keymap.set('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { desc = "Preview hunk" })
-			vim.keymap.set('n', '<leader>hd', ':Gitsigns diffthis<CR>', { desc = "Diff entire file against index" })
+      vim.keymap.set('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { desc = "Preview hunk" }) -- TODO: learn
 			vim.keymap.set('n', '<leader>td', ':Gitsigns toggle_deleted<CR>', { desc = "Toggle deleted" })
 
 		end,
-	},
-	{
-		"tpope/vim-fugitive",
 	},
 }

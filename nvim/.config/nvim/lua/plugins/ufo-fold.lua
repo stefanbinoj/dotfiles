@@ -6,7 +6,7 @@ return {
   event = "BufRead",
   keys = {
     { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" }, -- TODO: Learn
-    { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" }, -- TODO: Learn
+    { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
     { "zK", function()
       local winid = require("ufo").peekFoldedLinesUnderCursor()
       if not winid then

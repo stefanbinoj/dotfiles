@@ -34,6 +34,7 @@ brew "ripgrep"
 brew "stow"
 brew "tmux", args: ["HEAD"] # tmux >= 3.7 (progressbar terminal feature)
 brew "tree"
+brew "tree-sitter-cli"
 brew "wget"
 brew "terraform"
 brew "zoxide"
@@ -43,7 +44,7 @@ brew "hunk"
 # Casks
 cask "aerospace"
 # cask "agentsview"
-cask "codex" ##
+# cask "codex" ##
 # cask "discord"
 cask "helium-browser"
 cask "ghostty"

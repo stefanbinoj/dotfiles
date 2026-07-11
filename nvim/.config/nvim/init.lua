@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Load custom configs
 require("vim-options")
 require("keymaps")
+require("custom-keymaps")
 require("lazy").setup("plugins")
 
 -- Create autogroups

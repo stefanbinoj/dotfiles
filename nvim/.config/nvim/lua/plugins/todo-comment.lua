@@ -1,6 +1,7 @@
 return {
 	"folke/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
+	event = { "BufReadPost", "BufNewFile" },
 	opts = {
 		-- Default keywords: TODO, FIXME, HACK, XXX, NOTE, BUG, WARN, PERF, IDEA
 	},
@@ -15,7 +16,7 @@ return {
 		{
 			"[t",
 			function()
-				require("todo-comments").jump_prev() -- TODO: Learn
+				require("todo-comments").jump_prev()
 			end,
 			desc = "Previous TODO comment",
 		},
