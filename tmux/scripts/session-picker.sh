@@ -8,13 +8,14 @@
 
 set -e
 
-# --- ANSI codes ---
+# --- GitHub Dark Dimmed colors ---
 ESC=$'\033'
 BOLD="${ESC}[1m"
-DIM="${ESC}[2m"
-CYAN="${ESC}[36m"
-YELLOW="${ESC}[33m"
-REV="${ESC}[7m"
+FG="${ESC}[38;2;173;186;199m"       # #adbac7
+MUTED="${ESC}[38;2;118;131;144m"    # #768390
+BLUE="${ESC}[38;2;83;155;245m"      # #539bf5
+YELLOW="${ESC}[38;2;198;144;38m"    # #c69026
+SELECT="${ESC}[38;2;34;39;46;48;2;83;155;245m" # #22272e on #539bf5
 RESET="${ESC}[0m"
 HIDE_CURSOR="${ESC}[?25l"
 SHOW_CURSOR="${ESC}[?25h"
@@ -108,7 +109,7 @@ draw() {
 
     printf '%s%s' "$CLEAR" "$MOVE_HOME"
 
-    [ "$scroll" -gt 0 ] && printf '%s  … earlier%s\n' "$DIM" "$RESET"
+    [ "$scroll" -gt 0 ] && printf '%s  … earlier%s\n' "$MUTED" "$RESET"
 
     for ((i = scroll; i < end; i++)); do
         IFS='|' read -r type a b c d <<< "${items[$i]}"
@@ -122,28 +123,25 @@ draw() {
             [ "$max_path" -lt 12 ] && max_path=12
             spath=$(truncate "$spath" "$max_path")
 
-            if [ "$att" = "1" ]; then
-                att=" ${YELLOW}attached${RESET}"
-            else
-                att=""
-            fi
-
             if [ "$i" -eq "$selected" ]; then
+                [ "$att" = "1" ] && att=" attached" || att=""
                 row=$(printf '▸ %-4s %-18s %s%s' "$name" "$label" "$spath" "$att")
-                printf ' %s%s%s%s\n' "$REV" "$BOLD" "$row" "$RESET"
+                printf ' %s%s%s%s\n' "$SELECT" "$BOLD" "$row" "$RESET"
             else
-                printf '   %s%-4s%s %-18s %s%s%s%b\n' \
-                    "$CYAN" "$name" "$RESET" "$label" "$DIM" "$spath" "$RESET" "$att"
+                [ "$att" = "1" ] && att=" ${YELLOW}attached${RESET}" || att=""
+                printf '   %s%-4s%s %s%-18s%s %s%s%s%b\n' \
+                    "$BLUE" "$name" "$RESET" "$FG" "$label" "$RESET" \
+                    "$MUTED" "$spath" "$RESET" "$att"
             fi
         else
             local widx="$a" wname="$b" is_last="$c" branch='├─'
             [ "$is_last" = "1" ] && branch='└─'
             wname=$(truncate "$wname" $((cols - 16)))
-            printf '        %s%s %-3s %s%s\n' "$DIM" "$branch" "$widx" "$wname" "$RESET"
+            printf '        %s%s %-3s %s%s\n' "$MUTED" "$branch" "$widx" "$wname" "$RESET"
         fi
     done
 
-    [ "$end" -lt "$item_total" ] && printf '%s  … more%s\n' "$DIM" "$RESET"
+    [ "$end" -lt "$item_total" ] && printf '%s  … more%s\n' "$MUTED" "$RESET"
 
     return 0
 }

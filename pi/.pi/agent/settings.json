@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.79.9",
-  "defaultProvider": "minimax",
-  "defaultModel": "MiniMax-M3",
+  "lastChangelogVersion": "0.80.6",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
   "theme": "github-dark-default",
   "packages": [
@@ -26,7 +26,6 @@
   "enabledModels": [
     "github-copilot/gemini-3-flash-preview",
     "github-copilot/gemini-3.1-pro-preview",
-    "minimax/MiniMax-M2.7",
     "openai-codex/gpt-5.5",
     "minimax/MiniMax-M3"
   ],
