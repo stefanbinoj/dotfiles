@@ -16,6 +16,7 @@ node_modules
 **/models.json
 **/mcp-cache.json
 **/git/
+pi/.pi/agent/models-store.json
 
 
 **/bin/*
