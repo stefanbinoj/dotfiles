@@ -1,6 +1,6 @@
 theme = Github Dark Dimmed
 split-divider-color = "#6e7681"
-unfocused-split-opacity = 1
+unfocused-split-opacity = 0.5
 window-colorspace = "display-p3"
 
 font-family = "GeistMono NF"
@@ -13,11 +13,12 @@ cursor-style-blink = false
 
 window-padding-x = 16
 window-padding-y = 0
-macos-titlebar-proxy-icon = "hidden"
-title = " "
 
 shell-integration-features = "no-cursor"
-mouse-scroll-multiplier = 0.8
+mouse-scroll-multiplier = 0.6
 confirm-close-surface = false
 term = xterm-256color
 progress-style = true
+
+macos-titlebar-proxy-icon = "hidden"
+macos-titlebar-style = tabs
