@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.84.0",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-luna",
   "defaultThinkingLevel": "medium",
@@ -23,5 +23,17 @@
   },
   "treeFilterMode": "no-tools",
   "enableSkillCommands": true,
-  "quietStartup": true
+  "quietStartup": true,
+  "showCacheMissNotices": true,
+  "collapseChangelog": true,
+  "enableInstallTelemetry": false,
+  "defaultProjectTrust": "always",
+  "warnings": {
+    "anthropicExtraUsage": true
+  },
+  "transport": "auto",
+  "images": {
+    "autoResize": true,
+    "blockImages": false
+  }
 }

@@ -2,7 +2,14 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		require("lualine").setup({
+		local lualine = require("lualine")
+
+		-- Render lualine only for normal text buffers. Fugitive is kept as an intentional exception so its git UI still gets the regular statusline.
+		local function is_statusline_buffer()
+			return vim.bo.buftype == "" or vim.bo.filetype:match("^fugitive") ~= nil
+		end
+
+		lualine.setup({
 			options = {
 				theme = {
 					normal = {
@@ -67,5 +74,14 @@ return {
 				},
 			},
 		})
+
+		-- lualine does not have an allowlist option. Wrap its statusline renderer so every non-text buffer is ignored automatically.
+		local default_statusline = lualine.statusline
+		lualine.statusline = function()
+			if not is_statusline_buffer() then
+				return nil
+			end
+			return default_statusline()
+		end
 	end,
 }
