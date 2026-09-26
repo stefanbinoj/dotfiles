@@ -1,6 +1,8 @@
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 KEYTIMEOUT=1
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # zinit (mkdir -p "$HOME/.local/share/zinit" && git clone --branch main https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git")
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
@@ -21,11 +23,23 @@ zinit snippet OMZT::robbyrussell.zsh-theme
 autoload -Uz compinit
 compinit -C
 
+# edit command in nvim
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # mise
 eval "$(mise activate zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# Auto-activate Python virtual environments
+chpwd() {
+  if [[ -d .venv ]]; then
+    source .venv/bin/activate
+  fi
+}
 
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :

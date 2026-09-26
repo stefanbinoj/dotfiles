@@ -1,7 +1,6 @@
 {
   "lastChangelogVersion": "0.87.1",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
   "defaultThinkingLevel": "medium",
   "theme": "github-dark-default",
   "packages": [
@@ -35,6 +34,7 @@
   "images": {
     "autoResize": true,
     "blockImages": false
-  }
+  },
+  "enabledModels": []
 }
 
