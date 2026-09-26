@@ -7,8 +7,7 @@
   "packages": [
     "npm:pi-powerline",
     "npm:@plannotator/pi-extension",
-    "npm:@juicesharp/rpiv-btw",
-    "npm:pi-langfuse"
+    "npm:@juicesharp/rpiv-btw"
   ],
   "hideThinkingBlock": false,
   "hideToolOutput": true,
@@ -38,3 +37,4 @@
     "blockImages": false
   }
 }
+
