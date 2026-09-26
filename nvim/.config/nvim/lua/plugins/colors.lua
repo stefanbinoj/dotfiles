@@ -1,32 +1,32 @@
 return {
-	{
-		{
-			"mvllow/modes.nvim",
-			tag = "v0.2.1",
-			config = function()
-				require("modes").setup({
-					colors = {
-						bg = "#22272e",
-						copy = "#c69026", -- attention/yellow
-						delete = "#e5534b", -- danger/red
-						change = "#f69d50", -- variable/orange
-						format = "#dcbdfb", -- entity/purple
-						insert = "#57ab5a", -- success/green
-						replace = "#539bf5", -- accent/blue
-						select = "#b083f0", -- magenta
-						visual = "#b083f0",
-					},
-
-					line_opacity = 0.12,
-					set_cursor = true,
-					set_cursorline = true,
-					set_number = true,
-					set_signcolumn = true,
-					ignore_filetypes = { "NvimTree", "TelescopePrompt", "minifiles" },
-				})
-			end,
-		},
-	},
+	-- {
+	-- 	{
+	-- 		"mvllow/modes.nvim",
+	-- 		tag = "v0.2.1",
+	-- 		config = function()
+	-- 			require("modes").setup({
+	-- 				colors = {
+	-- 					bg = "#22272e",
+	-- 					copy = "#c69026", -- attention/yellow
+	-- 					delete = "#e5534b", -- danger/red
+	-- 					change = "#f69d50", -- variable/orange
+	-- 					format = "#dcbdfb", -- entity/purple
+	-- 					insert = "#57ab5a", -- success/green
+	-- 					replace = "#539bf5", -- accent/blue
+	-- 					select = "#b083f0", -- magenta
+	-- 					visual = "#b083f0",
+	-- 				},
+	--
+	-- 				line_opacity = 0.12,
+	-- 				set_cursor = true,
+	-- 				set_cursorline = true,
+	-- 				set_number = true,
+	-- 				set_signcolumn = true,
+	-- 				ignore_filetypes = { "NvimTree", "TelescopePrompt", "minifiles" },
+	-- 			})
+	-- 		end,
+	-- 	},
+	-- },
 	{
 		"projekt0n/github-nvim-theme",
 		name = "github-theme",

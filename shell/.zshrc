@@ -34,6 +34,10 @@ eval "$(mise activate zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
 
+# autin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
 # Auto-activate Python virtual environments
 chpwd() {
   if [[ -d .venv ]]; then
