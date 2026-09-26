@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.0",
+  "lastChangelogVersion": "0.87.1",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-luna",
   "defaultThinkingLevel": "medium",
@@ -7,7 +7,8 @@
   "packages": [
     "npm:pi-powerline",
     "npm:@plannotator/pi-extension",
-    "npm:@juicesharp/rpiv-btw"
+    "npm:@juicesharp/rpiv-btw",
+    "npm:pi-langfuse"
   ],
   "hideThinkingBlock": false,
   "hideToolOutput": true,
