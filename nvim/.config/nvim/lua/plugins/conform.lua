@@ -14,6 +14,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
+			c = { "clang_format" },
 			javascript = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			typescript = { "prettierd" },

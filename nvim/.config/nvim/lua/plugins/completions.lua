@@ -34,6 +34,7 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-space>"] = cmp.mapping.complete(),
+					["<C-y>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = {
 					{ name = "nvim_lsp" },

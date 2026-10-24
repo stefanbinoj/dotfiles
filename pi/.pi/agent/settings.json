@@ -36,5 +36,7 @@
     "blockImages": false
   },
   "deviceId": "330e932f-20ca-4c2b-b5e7-6a5b7fb14833",
-  "enabledModels": []
+  "enabledModels": [
+    "openai/gpt-6-luna"
+  ]
 }

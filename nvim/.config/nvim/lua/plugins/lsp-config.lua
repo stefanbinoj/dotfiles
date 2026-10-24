@@ -14,7 +14,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "vtsls" },
+				ensure_installed = { "lua_ls", "vtsls", "clangd" },
 			})
 		end,
 	},
@@ -74,9 +74,9 @@ return {
 					vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, key("Go to definition"))
 					vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, key("Go to references"))
 					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, key("Go to declaration")) -- TODO: learn
-					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, key("Go to implementation"))
+					-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, key("Go to implementation"))
 					vim.keymap.set("n", "go", vim.lsp.buf.type_definition, key("Go to type definition"))
-					vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, key("Signature help"))
+					-- vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, key("Signature help"))
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, key("Code actions"))
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, key("Rename symbol"))
 					vim.keymap.set("i", "<C-j>", vim.lsp.buf.signature_help, key("Signature help"))

@@ -54,4 +54,10 @@ alias vi=nvim
 alias lg=lazygit
 alias ld=lazydocker
 alias cat=bat
-alias tmx="~/.local/bin/tmux-sessionizer"
+tmx() {
+  if (( $# == 0 )); then
+    "$HOME/.local/bin/tmux-sessionizer"
+  else
+    "$HOME/.local/bin/tmux-sessionizer" "${1:A}"
+  fi
+}

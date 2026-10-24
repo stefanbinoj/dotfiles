@@ -27,7 +27,17 @@ return {
 				},
 				pickers = {
 					find_files = {
-						find_command = { "rg", "--files", "--ignore", "--hidden", "-g", "!node_modules/*", "-g", "!.git/*" },
+						-- but always include .env* and .gitignore.
+						find_command = {
+							"sh",
+							"-c",
+							[[
+(
+  rg --files --ignore --hidden -g '!node_modules/*' -g '!.git/*'
+  rg --files --no-ignore --hidden -g '.env*' -g '.gitignore'
+) | sort -u
+]],
+						},
 					},
 				},
 			})
@@ -40,9 +50,14 @@ return {
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
-			vim.keymap.set("n", "<leader>vh", builtin.help_tags, { desc = "Help tags" })
+			-- vim.keymap.set("n", "<leader>vh", builtin.help_tags, { desc = "Help tags" })
 			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recent files" }) -- TODO: learn
-			vim.keymap.set("n", "<leader>gh", "<cmd>Telescope git_file_history<cr>", { desc = "Git file history (current file)" })
+			vim.keymap.set(
+				"n",
+				"<leader>gh",
+				"<cmd>Telescope git_file_history<cr>",
+				{ desc = "Git file history (current file)" }
+			)
 		end,
 	},
 	{
