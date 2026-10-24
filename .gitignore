@@ -20,6 +20,8 @@ pi/.pi/agent/models-store.json
 
 
 **/bin/*
+!tmux/.local/bin/
+!tmux/.local/bin/tmux-sessionizer
 **/state/*
 **/cache/*
 **/pi-session-*

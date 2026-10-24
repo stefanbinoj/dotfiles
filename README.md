@@ -26,7 +26,7 @@ dotfiles/
 ├── raycast/     # Raycast settings
 ├── shell/       # zsh + vimrc
 ├── ssh/         # SSH client config
-├── tmux/        # tmux + session picker
+├── tmux/        # tmux + tmux-sessionizer + project session layout
 └── zed/         # Zed editor
 ```
 
@@ -64,7 +64,7 @@ Useful flags:
     <img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-30-40" src="https://github.com/user-attachments/assets/6376ecd5-6e31-41ce-acdf-5fb281a32f35" />
 
 
-  
+
 </td>
 <td>
 
@@ -76,7 +76,7 @@ Useful flags:
 <td>
 <img width="2880" height="1748" alt="Screenshot 2026-06-21 at 08-11-03" src="https://github.com/user-attachments/assets/4051284f-5a5f-41ac-a2ed-5ead9e29422b" />
 
-  
+
 </td>
 <td>
 
@@ -182,12 +182,14 @@ zsh shell setup.
 
 ### tmux
 
-Configs: [`.tmux.conf`](tmux/.tmux.conf), [`session-picker.sh`](tmux/scripts/session-picker.sh)
+Configs: [`.tmux.conf`](tmux/.tmux.conf), [`tmux-sessionizer`](tmux/.local/bin/tmux-sessionizer), [`tmux-sessionizer.conf`](tmux/.config/tmux-sessionizer/tmux-sessionizer.conf), [`.tmux-sessionizer` layout hook](tmux/.tmux-sessionizer)
 
-Terminal multiplexer.
+Terminal multiplexer and fuzzy project/session picker.
 
 - Vi-style pane navigation (`hjkl`) and arrow-key resizing
-- `prefix + s` opens a popup custom session picker
+- `prefix + s` opens ThePrimeagen's `tmux-sessionizer` in a popup
+- Picker searches `~/Developer` up to two directory levels deep and `~/dotfiles`
+- Newly created project sessions open with a 60/40 left/right layout: terminal on the left, Neovim upper-right, OpenCode lower-right
 - Clipboard integration via `xclip` in copy-mode
 
 ### Zed

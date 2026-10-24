@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Sourced by tmux-sessionizer only when it creates a new project session.
+
+PROJECT_DIR="$PWD"
+TERMINAL_PANE="${TMUX_PANE:?tmux-sessionizer layout hook must run inside a tmux pane}"
+SESSION_ID="$(tmux display-message -p -t "$TERMINAL_PANE" '#{session_id}')"
+
+tmux rename-window -t "$TERMINAL_PANE" 'terminal'
+tmux split-window -h -p 40 -t "$TERMINAL_PANE" -c "$PROJECT_DIR"
+tmux new-window -d -t "$SESSION_ID" -n 'nvim' -c "$PROJECT_DIR" 'nvim'
+tmux new-window -d -t "$SESSION_ID" -n 'pi' -c "$PROJECT_DIR" 'pi'
+tmux select-window -t "$TERMINAL_PANE"

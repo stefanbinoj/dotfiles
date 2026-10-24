@@ -54,3 +54,4 @@ alias vi=nvim
 alias lg=lazygit
 alias ld=lazydocker
 alias cat=bat
+alias tmx="~/.local/bin/tmux-sessionizer"
