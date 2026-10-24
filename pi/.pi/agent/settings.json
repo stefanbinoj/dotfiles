@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.4.0",
   "defaultProvider": "openai-codex",
   "defaultThinkingLevel": "medium",
   "theme": "github-dark-default",
@@ -35,6 +35,6 @@
     "autoResize": true,
     "blockImages": false
   },
+  "deviceId": "330e932f-20ca-4c2b-b5e7-6a5b7fb14833",
   "enabledModels": []
 }
-
