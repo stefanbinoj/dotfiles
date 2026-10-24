@@ -329,7 +329,7 @@ if [[ "$selected" =~ ^\[TMUX\]\ (.+)$ ]]; then
     selected="${BASH_REMATCH[1]}"
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+selected_name="${TMUX_SESSION_NAME:-$(basename "$selected" | tr . _)}"
 
 if ! is_tmux_running; then
     tmux new-session -ds "$selected_name" -c "$selected"

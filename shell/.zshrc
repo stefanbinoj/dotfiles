@@ -58,6 +58,6 @@ tmx() {
   if (( $# == 0 )); then
     "$HOME/.local/bin/tmux-sessionizer"
   else
-    "$HOME/.local/bin/tmux-sessionizer" "${1:A}"
+    TMUX_SESSION_NAME="${1:A}" "$HOME/.local/bin/tmux-sessionizer" "${1:A}"
   fi
 }

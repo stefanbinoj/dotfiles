@@ -16,7 +16,11 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("keymaps")
 require("custom-keymaps")
-require("lazy").setup("plugins")
+require("lazy").setup({
+	{ import = "plugins.1" },
+	{ import = "plugins.2" },
+	{ import = "plugins.lang" },
+})
 
 -- Create autogroups
 local yank_group = vim.api.nvim_create_augroup("HighlightYank", { clear = true })
